@@ -130,3 +130,78 @@ class BSTNode(object):
                 raise RuntimeError()
             self.right.check_ri()
 
+class MinBSTNode(BSTNode):
+    """
+    A BSTNode which is augment to keep track of the node with the minimum key in the subtree rooted at
+    this node.
+    """
+    def __init__(self, parent, k):
+        """
+        Creates a node.
+
+        Args:
+            parent: The node's parent
+            k: key of the node
+        """
+        super(MinBSTNode(self).__init__(parent, k))
+        self.min=self
+    
+    def find_min(self):
+        """
+        Finds the node with the minimum key in the subtree rooted at this node.
+        Returns:
+            The node with the minimum key.
+        """
+        return self.min
+    
+    def insert(self, node):
+        """
+        Inserts a node into the subtree rooted at this node.
+        Args:
+            node: The node to be inserted.
+        """
+        if node is None:
+            return
+        if node.key <self.key:
+            # Updates the min of this node if the inserted node has a smaller key.
+            if node.key<self.min.key:
+                self.min=node
+            if self.left is None:
+                node.parent=self
+                self.left =node
+            else:
+                self.left.insert(node)
+        else:
+            if self.right is None:
+                node.parent=self
+                self.right=node
+            else:
+                self.right.insert(node)
+
+    def delete(self):
+        """Deletes this node itself.
+        
+        Return:
+            This node.
+        """
+        if self.left is None or self.right is None:
+            if self is self.parent.left:
+                self.parent.left=self.left or self.right
+                if self.parent.left is not None:
+                    self.parent.left.parent=self.parent
+                    self.parent.min=self.parent.left.min
+                else:
+                    self.parent.min=self.parent
+                c=self.parent
+                while c.parent is not None and c is c.parent.left:
+                    c.parent.min=c.min
+                    c=c.parent
+            else:
+                self.parent.right=self.left or self.right
+                if self.parent.right is not None:
+                    self.parent.right.parent=self.parent
+            return self
+        else:
+            s=self.next_larger()
+            self.key, s.k=s.key, self.key
+            return s.delete()
