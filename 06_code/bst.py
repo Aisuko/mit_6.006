@@ -59,6 +59,74 @@ class BSTNode(object):
         """Finds the node with minimum key in the subtree rooted at this node.
         Returns: The node with minimum key.
         """
-        
+        current=self
+        while current.left is not None:
+            current=current.left
+        return current
+    
+    def next_larger(self):
+        """Returns the node with next larger key 
+        """
+        if self.right is not None:
+            return self.right.find_min()
+        current=self
+        while current.parent is not None and current is current.parent.right:
+            current=current.parent
+        return current.parent
 
-        
+    def insert(self, node):
+        """Inserts a node into the subtree rooted at this node.
+        Args:
+            node: The node to be inseted.
+        """
+        if node is None:
+            return
+        if node.key<self.key:
+            if self.left is None:
+                node.parent=self
+                self.left=node
+            else:
+                self.left.insert(node)
+        else:
+            if self.right is None:
+                node.parent=self
+                self.right=node
+            else:
+                self.right.insert(node)
+    
+    def delete(self):
+        """Deletes and returns this node from the BST.
+        """
+        if self.left is None or self.right is None:
+            if self is self.parent.left:
+                self.parent.left=self.left or self.right
+                if self.parent.left is not None:
+                    self.parent.left.parent=self.parent
+            else:
+                self.parent.right=self.left or self.right
+                if self.parent.right is not None:
+                    self.parent.right.parent=self.parent
+            return self
+        else:
+            s=self.next_larger()
+            self.key, s.key=s.key, self.key
+            return s.delete()
+    
+    def check_ri(self):
+        """
+        Checks the BST representation invariant around this node.
+        Raise an exception id the RI is violated.
+        """
+        if self.left is not None:
+            if self.left.key>self.key:
+                raise RuntimeError("")
+            if self.left.parent is not self:
+                raise RuntimeError("")
+            self.left.check_ri()
+        if self.right is not None:
+            if self.right.key<self.key:
+                raise RuntimeError()
+            if self.right.parent is not self:
+                raise RuntimeError()
+            self.right.check_ri()
+
