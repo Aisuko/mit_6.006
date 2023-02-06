@@ -3,6 +3,9 @@
 
 def containsDuplicate(nums) -> bool:
     """Given an integer array nums, return true if any value appears at least twice in the arary
+
+    Time: O(n)
+    If there is another request that it needs to count the number has appearances, there may need more process.
     """
     l={}
     for i in nums:
