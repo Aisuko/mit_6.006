@@ -1,9 +1,13 @@
 #!/usr/bin/env python
 #Array
 #dynamic programming
-
+# O(n)
 
 def maxProfit(prices)->int:
+    """121. Best time to but and sell stock
+
+    Time complexity: I assumed it is O(n), n=len(prices)-1
+    """
     finalProfit=profit=k=0
     
     while k<len(prices)-1:
@@ -14,4 +18,7 @@ def maxProfit(prices)->int:
         k+=1
     return finalProfit
 
-print(maxProfit([7,1,5,3,6,4]))
+# print(maxProfit([7,1,5,3,6,4]))
+
+if __name__=="__main__":
+    print(maxProfit([7,1,5,3,6,4]))
