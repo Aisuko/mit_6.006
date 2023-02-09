@@ -9,5 +9,8 @@ Repo for code from MIT open-course 6.006, all right belongs to MIT OpenCourseWar
 The one about the `__main__` function's debugging in VSCode
 https://github.com/microsoft/debugpy/issues/1175#issuecomment-1408389901
 
+### Handwriting
+Please check out the handwriting [Wiki](https://github.com/Aisuko/mit_6.006/wiki)
+
 ### FQAs
 The Wiki for the project here [FQAs](https://github.com/Aisuko/mit_6.006/wiki/FQAs)
