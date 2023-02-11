@@ -2,7 +2,7 @@
 #242.Valid Anagram
 import collections
 class Solution:
-    def isAnagram(self, s, t):
+    def isAnagram(self, s, t)-> bool:
         """
         O(len(s)+len(t)+len(dic.items()))
         """
@@ -11,7 +11,12 @@ class Solution:
             dic[i]+=1
         for i in t:
             dic[i]-=1
-        #TODO
+        # here needs items to return key-values pairs 
+        # for dic
+        for k,v in dic.items():
+            if v!=0:
+                return False
+        return True
 
 
 if __name__=="__main__":

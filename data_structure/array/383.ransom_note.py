@@ -20,8 +20,9 @@ class Solution:
                 # According to the request, 
                 # * "aa" ->"aab" is true.
                 # * "aa" -> "ab" is false
-                
+                v=dic[i]-1
                 #TODO
+        return True
 
 
 if __name__ == "__main__":
