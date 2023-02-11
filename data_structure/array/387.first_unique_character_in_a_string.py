@@ -9,23 +9,7 @@ class Solution:
         Time complexity: O(n)
         Space complexity: O(n)
         """
-        tempFirst={}
-        allElement={}
-
-        for k,v in enumerate(s):
-            if v not in allElement:
-                tempFirst[v]=k
-                allElement[v]=k
-            # check if element is in unique hashmap
-            elif v in tempFirst:
-                tempFirst.pop(v)
-
-        # if there is unique element then return its position
-        if (len(tempFirst)>0):
-            res=list(tempFirst.keys())[0]
-            return tempFirst[res] # otherwise return -1
-        else:
-            return -1
+        pass
 
 
 if __name__=="__main__":
