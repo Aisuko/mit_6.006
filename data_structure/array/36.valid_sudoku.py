@@ -44,7 +44,7 @@ class Solution:
                     for c in range(j,j+3):
                         if board[r][c] in elements:
                             return False
-                        elif board[r][c] !="." and board[r][c] not in elements:
+                        elif board[r][c] !=".":
                             elements.append(board[r][c])
         
         return True
