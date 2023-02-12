@@ -25,13 +25,9 @@ class Solution:
         slow=head
         fast=head.next
 
-        while slow.next!=None and fast.next!=None:
-            if slow==fast:
-                return True
+        # we should keep eyes on their value should not be none.
+        # because we need to use their next or next.next point's value
+
+            # Please be sure the value of next.next is not None and use it.
             # boarder limitation
-            elif fast.next.next!=None:
-                slow=slow.next
-                fast=fast.next.next
-            else:
-                return False
-        return False
+
