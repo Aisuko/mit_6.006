@@ -8,7 +8,7 @@ class ListNode:
         self.next = None
 
 class Solution:
-    def hasCycle(self, head: Optional[ListNode]) -> bool:
+    def hasCycle(self, head):
         """
         Here is a concept for check cyclic Linked list is two pointers,
         * one is normal(or move one)
@@ -19,15 +19,13 @@ class Solution:
         Time Complexity: O(n)
         Space Complexity: O(1)
         """
-        if not head:
-            return False
-        
-        slow=head
-        fast=head.next
-
         # we should keep eyes on their value should not be none.
         # because we need to use their next or next.next point's value
-
             # Please be sure the value of next.next is not None and use it.
             # boarder limitation
+        
+        #How we compre them, slow=fast and we use .next as the camparing value
+        # we need to check it values if we want to move to it.next.next
+
+        pass
 
