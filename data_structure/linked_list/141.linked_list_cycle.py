@@ -26,6 +26,6 @@ class Solution:
         
         #How we compre them, slow=fast and we use .next as the camparing value
         # we need to check it values if we want to move to it.next.next
-
         pass
 
+            

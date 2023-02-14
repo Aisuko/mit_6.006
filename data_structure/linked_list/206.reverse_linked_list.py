@@ -12,4 +12,7 @@ class Solution:
         A linked list can be reversed either iteratively or recursively.
         The time complexity for them are all O(n).
         """
-        pass
+        
+        # iteratively
+        # we need to pay attention on the first element in the linked list
+        
