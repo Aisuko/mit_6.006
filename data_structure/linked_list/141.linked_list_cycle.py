@@ -26,6 +26,19 @@ class Solution:
         
         #How we compre them, slow=fast and we use .next as the camparing value
         # we need to check it values if we want to move to it.next.next
-        pass
+        if not head:
+            return head
+        slow=head
+        fast=head.next
 
-            
+        while slow.next and fast.next:
+            if slow==fast:
+                return True
+            # if slow !=fast, fast was need to update, be sure check
+            # fast.next.next before
+            elif fast.next.next:
+                slow=slow.next
+                fast=fast.next.next
+            else:
+                return False
+        return False
