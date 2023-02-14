@@ -39,7 +39,23 @@ class Solution:
             list2=self.mergeTwoLists(list1,list2.next)
             return list2
         
-        # iteration
+        # ITERATION
         # things are totally different from recusrive, we need to pay attention on node.next in every loop
-        pass
+        
+        # if we use iteration, so we need define final and current ListNode
+        final=curr=ListNode(0)
+
+        while list1 and list2:
+            if list1.val<list2.val:
+                # because curr is ListNode(0), and we can append next node
+                curr.next=list1.val
+                list1=list1.next
+            else:
+                curr.next=list2.val
+                list2=list2.next
+            curr=curr.next
+        # be careful the rest of list1 and list2
+        curr.next=list1 or list2
+        # be careful the first node is [0], so return final.next
+        return final.next
 
