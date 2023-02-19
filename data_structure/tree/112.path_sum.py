@@ -16,4 +16,6 @@ class Solution:
         if not root:
             return False
         # if use recursive, while should not be here.
-        
+        if not root.left and not root.right and targetSum-root.val==0:
+            return True
+        return self.hasPathSum(root.left, targetSum-root.val) or self.hasPathSum(root.right,targetSum-root.val)
