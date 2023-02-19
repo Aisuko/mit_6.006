@@ -16,6 +16,9 @@ class Solution:
         while stack:
             # What is the next?
             # follow left-->right-->root
+            node=stack.pop()
+            if type(node)==int:
+                res.append(node)
             elif node:
                 stack.append(node.val)
                 stack.append(node.right)
