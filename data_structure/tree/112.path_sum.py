@@ -15,4 +15,5 @@ class Solution:
         """
         if not root:
             return False
-        # why we use stack? 1.It is better do not change the value of parameter. 2, We want to use the interface from ADS
+        # if use recursive, while should not be here.
+        

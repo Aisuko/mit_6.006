@@ -14,3 +14,9 @@ class Solution:
 
         # How to do this?
         # the root node is still root,so get the root node first
+        if not root:
+            return root
+        root.left,root.right=root.left,root.right
+        self.invertTree(root.left)
+        self.invertTree(root.right)
+        return root
