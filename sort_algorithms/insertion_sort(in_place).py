@@ -15,5 +15,11 @@ def insertion_sort(array):
         # let's compare the elements
         prevIndex=i-1
         current=array[i]
+        # We need to compare the number of n-i elements,
+        # so we need a loop
+        while prevIndex>-1 and array[prevIndex]>current:
+            array[prevIndex+1]=array[prevIndex]
+            prevIndex-=1
         #TODO
+        return array
 
