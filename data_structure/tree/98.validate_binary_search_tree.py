@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # 98. Validate Binary search tree
 
-def isValidBST(root):
+def isValidBST(root): #-> bool
     """
     Return bool
 
