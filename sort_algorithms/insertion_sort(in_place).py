@@ -20,6 +20,6 @@ def insertion_sort(array):
         while prevIndex>-1 and array[prevIndex]>current:
             array[prevIndex+1]=array[prevIndex]
             prevIndex-=1
-        #TODO
+        array[prevIndex]=current
         return array
 
