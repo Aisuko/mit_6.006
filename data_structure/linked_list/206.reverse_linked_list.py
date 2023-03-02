@@ -17,7 +17,7 @@ class Solution:
         #TODO
         cur=head
         pre=None
-        while cur:
+        while head:
             next=cur.next
             cur.next=pre
             pre=cur
@@ -25,4 +25,9 @@ class Solution:
         return pre
 
         # recursion
-        #TODO
+        if not head:
+            return None
+        newHead=self.reverseList(head)
+        head.next.next=head
+        head.next=None
+        return newHead
