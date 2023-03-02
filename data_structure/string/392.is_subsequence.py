@@ -26,4 +26,4 @@ class Solution:
         # return self.isSubdequence(s[1:],t[1:]) if s[0]==t[0] else self.isSubdequence(s,t[1:])
 
         #TODO
-
+        

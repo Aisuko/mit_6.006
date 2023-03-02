@@ -5,7 +5,9 @@ def isIsomorphic(s,t):
     """
     Return bool
     """
-    #TODO
+    l=[s.index(i) for i in s]
+    r=[t.index(i) for i in t]
+    return l==t
 
 s="egg"
 t="add"

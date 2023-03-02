@@ -21,7 +21,11 @@ class Solution:
                 # * "aa" ->"aab" is true.
                 # * "aa" -> "ab" is false
                 v=dic[i]-1
-                #TODO
+                if v<0:
+                    return False
+                dic[i]=v
+            else:
+                return False
         return True
 
 
