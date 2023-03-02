@@ -6,7 +6,6 @@ class Solution:
         """
         Return int
         """
-        #TODO
 
         l=set()
         for c in s:

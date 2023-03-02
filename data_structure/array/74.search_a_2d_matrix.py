@@ -19,7 +19,7 @@ class Solution:
             # Here we use column to divide mid which is the number of rows traversed
             r=mid//column
             # The remainder of this operation is the column elements are need to check
-            c=mid%column  #TODO
+            c=mid%column
             if matrix[r][c]==target:
                 return True
             elif matrix[r][c]<target:

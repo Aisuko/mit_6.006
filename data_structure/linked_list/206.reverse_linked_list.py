@@ -14,7 +14,6 @@ class Solution:
         """
         
         # iteratively
-        #TODO
         cur=head
         pre=None
         while head:
