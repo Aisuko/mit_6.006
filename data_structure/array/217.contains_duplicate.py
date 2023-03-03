@@ -7,14 +7,16 @@ def containsDuplicate(nums) -> bool:
     Time: O(n)
     If there is another request that it needs to count the number has appearances, there may need more process.
     """
-    l={}
-    for i in nums:
-        if i in l:
-            return True
-        else:
-            # Random to use a integer number
-            l[i]=0
-    return False
+    # l={}
+    # for i in nums:
+    #     if i in l:
+    #         return True
+    #     else:
+    #         # Random to use a integer number
+    #         l[i]=0
+    # return False
+
+    return not len(nums)==len(set(nums))
 
 # Case1
 print(containsDuplicate([1,2,3,1]))
