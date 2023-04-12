@@ -28,6 +28,7 @@ def merge(nums1,m,nums2,n):
                 nums1[final]=nums1[i]
                 final-=1
                 i-=1
+        # if is not necessary, because the while loop will check the condition
         elif j>=0:
             nums1[final]=nums2[j]
             final-=1
