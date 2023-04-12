@@ -9,6 +9,7 @@ class Solution:
         """
         row=len(matrix)
         column=len(matrix[0])
+        # The basic factor of divide and conquer is have a start and end point
         start=0
         end=row*column-1
         # Traversing

@@ -22,6 +22,7 @@ class Solution:
         if len(dic)>0:
             # Here need the first non-repeating character
             fnc=list(dic.keys())[0]
+            # if you did not use dic[v]=k then you cannot get index like this.
             return dic[fnc]
         else:
             return -1

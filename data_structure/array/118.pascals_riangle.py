@@ -20,8 +20,10 @@ class Solution:
         for i in range(numRows-1):
             tempArray=[1]
             # if here has an iteration from i, especially j+1, the iteration above needs to be range(numRows-1)
-            # And there won not exexute at the first time
+            # And there won not execute at the first time
             for j in range(i):
+                # Here is difficult to know how to calculate the value, but it is easy to know how to get the value if 
+                # you know the index of the value. You actually have a 2d list, and you need to know how to get the value.
                 tempArray.append(finalArray[i][j]+finalArray[i][j+1])
             tempArray.append(1)
             finalArray.append(tempArray)

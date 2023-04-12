@@ -11,9 +11,8 @@ class Solution:
             dic[i]+=1
         for i in t:
             dic[i]-=1
-        # here needs items to return key-values pairs 
-        # for dic
-        for k,v in dic.items():
+        # values can return a list of values
+        for v in dic.values():
             if v!=0:
                 return False
         return True
